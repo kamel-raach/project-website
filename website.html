@@ -8,7 +8,12 @@
 
 body {
   background-image: url("https://cdn.lowgif.com/full/2069a80cae998e4e-.gif");
+  background-size: cover;
+
+ 
 }
+
+
 h1{
   color: red;
 }
@@ -21,7 +26,7 @@ body {
 
 .glow {
   font-size: 80px;
-  color: #fff;
+  color: red;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -43,7 +48,11 @@ body {
 </head>
 <body>
 
-<h1 class="glow">Play To Win </h1>
+<script>$( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+</script>
+<h1 class="glow">$$Bet && Win$$ </h1>
 <style>
 h1 {text-align: center;}
 </style>
@@ -62,14 +71,24 @@ div.c {
   text-align: right;
 } 
 </style>
-<div class="c">
+<div class="c"></div>
+<h4 class="Games">Choose your lucky Game</h4>
+<style>
+h4 {text-align: center; color :red; font-size :xx-large; }
+</style>
 
-<form action="/action_page.php">
-  <label for="fname">Pseudo:</label><br>
-  <input type="text" id="fname" name="fname" value=" "><br>
-  <label for="lname">Password:</label><br>
-  <input type="text" id="lname" name="lname" value=" "><br><br>
-  <input type="submit" value="Log In">
-</form> 
+
+  <a href="slotmachine.html"><img src="http://www.parkway100.org/wp-content/uploads/2019/08/jackpot.gif" alt="Trulli" width="250" height="100" ></a>
+<a href="seven.html"><img src="https://static.wixstatic.com/media/c811cf_ea40c2ed4549461b81469c4da9853398~mv2.gif" alt="Trulli" width="250"></a>
+
+
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
 </body>
 </html>

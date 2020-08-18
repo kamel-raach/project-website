@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Triple seven</title>
+        <style src = style.css> </style>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+
+<a href="website.html" class="btn Home">HOME</a>
+
+        <div id = "instuct-div">
+        <p id = "instructions" > Get 3 of a kind in a row to win a jackpot!  </p>
+        </div>
+        <div class = "container">
+            <div id = "buttons">
+            <button class = "bet1">Bet $1</button>
+        <button class = "bet10" >Bet $10 </button>
+         <button class = "bet100" >Bet $100 </button>
+          </div>
+          <div id = "slot-div">
+            <p>
+            <span class = gold-text id = "money"> $$$$$$$ </span>
+            <br>
+             <span id =  "victoryMessage">Win the game by winning $10,000 or more!   </span></p>
+                <p id = "slots" style="list-style: none;">
+         <span id = "row1">  Row 1  </span> <br>
+         <span id = "row2"> Row 2  </span> <br>
+         <span id = "row3">  Row 3   </span>
+         </p> 
+         </div>
+        </div>
+        <p id ="win" class = gold-text>  </p>
+        <style>
+body {
+    background-color: #331a00;
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/82/Las_Vegas_slot_machines.jpg");
+background-size: cover;
+}
+#instructions {
+     font-size: 20px; color: white;
+    font-family:arial, helvetica, sans-serif; text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+#instuct-div {
+    position: absolute;
+     width: 40%;
+}
+
+.container{
+    display: flex;
+}
+
+
+#buttons {
+    margin-top: 95px;
+    text-align: left;
+
+    margin-left: left;
+    margin-right: 20px ;
+    margin-bottom: 0px;
+    
+
+   width: 50%;
+
+  
+}
+#slot-div{
+    display: inline-block;
+    width: 40%;
+     flex-grow: 1;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+}
+
+#slots {
+    display: inline-block;
+    text-align: left;
+    font-size: 50px;
+    color: white;
+    font-family: Georgia, serif;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.gold-text  {
+    font-size: 40px;
+color:    #D5AD6D; 
+background: -webkit-linear-gradient(transparent, transparent),
+-webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+background: -o-linear-gradient(transparent, transparent);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+#victoryMessage {
+    font-size: 20px;
+    color: white;
+    font-family:arial, helvetica, sans-serif;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+#intructions {
+    font-size: 20px;
+    color: white;
+    font-family:arial, helvetica, sans-serif;
+}
+
+
+.bet1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+border:1px solid #7d99ca; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:30px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #a5b8da; background-image: -webkit-gradient(linear, left top, left bottom, from(#a5b8da), to(#7089b3));
+ background-image: -webkit-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -moz-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -ms-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: -o-linear-gradient(top, #a5b8da, #7089b3);
+ background-image: linear-gradient(to bottom, #a5b8da, #7089b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a5b8da, endColorstr=#7089b3);
+}
+
+.bet1:hover{
+     margin-right: 20px;
+ border:1px solid #5d7fbc;
+ background-color: #819bcb; background-image: -webkit-gradient(linear, left top, left bottom, from(#819bcb), to(#536f9d));
+ background-image: -webkit-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -moz-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -ms-linear-gradient(top, #819bcb, #536f9d);
+ background-image: -o-linear-gradient(top, #819bcb, #536f9d);
+ background-image: linear-gradient(to bottom, #819bcb, #536f9d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#819bcb, endColorstr=#536f9d);
+}
+.bet10{
+       margin-bottom: 20px;
+border:1px solid #72021c; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:30px;font-family:arial, helvetica, sans-serif; padding: 20px 20px 20px 20px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #a90329; background-image: -webkit-gradient(linear, left top, left bottom, from(#a90329), to(#6d0019));
+ background-image: -webkit-linear-gradient(top, #a90329, #6d0019);
+ background-image: -moz-linear-gradient(top, #a90329, #6d0019);
+ background-image: -ms-linear-gradient(top, #a90329, #6d0019);
+ background-image: -o-linear-gradient(top, #a90329, #6d0019);
+ background-image: linear-gradient(to bottom, #a90329, #6d0019);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#a90329, endColorstr=#6d0019);
+}
+
+.bet10:hover{
+ border:1px solid #450111;
+ background-color: #77021d; background-image: -webkit-gradient(linear, left top, left bottom, from(#77021d), to(#3a000d));
+ background-image: -webkit-linear-gradient(top, #77021d, #3a000d);
+ background-image: -moz-linear-gradient(top, #77021d, #3a000d);
+ background-image: -ms-linear-gradient(top, #77021d, #3a000d);
+ background-image: -o-linear-gradient(top, #77021d, #3a000d);
+ background-image: linear-gradient(to bottom, #77021d, #3a000d);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#77021d, endColorstr=#3a000d);
+}
+
+
+
+.bet100{
+       margin-bottom: 20px;
+ 
+border:1px solid #34740e; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:35px;font-family:arial, helvetica, sans-serif; padding: 23px 23px 23px 23px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #4ba614; background-image: -webkit-gradient(linear, left top, left bottom, from(#4ba614), to(#008c00));
+ background-image: -webkit-linear-gradient(top, #4ba614, #008c00);
+ background-image: -moz-linear-gradient(top, #4ba614, #008c00);
+ background-image: -ms-linear-gradient(top, #4ba614, #008c00);
+ background-image: -o-linear-gradient(top, #4ba614, #008c00);
+ background-image: linear-gradient(to bottom, #4ba614, #008c00);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#4ba614, endColorstr=#008c00);
+}
+
+.bet100:hover{
+     
+ border:1px solid #224b09;
+ background-color: #36780f; background-image: -webkit-gradient(linear, left top, left bottom, from(#36780f), to(#005900));
+ background-image: -webkit-linear-gradient(top, #36780f, #005900);
+ background-image: -moz-linear-gradient(top, #36780f, #005900);
+ background-image: -ms-linear-gradient(top, #36780f, #005900);
+ background-image: -o-linear-gradient(top, #36780f, #005900);
+ background-image: linear-gradient(to bottom, #36780f, #005900);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#36780f, endColorstr=#005900);
+}
+</style>
+<script>
+
+    $( document ).ready(function() {
+    var spinning = false;
+    var cash = 1000;
+    var betType = 0;
+    var charType = ["7","$","!"] ;
+    var slots = [["7","$","7"],["$","7","!"],["!","!","$"]];
+    //this funtion needs to be called in order to display any change in the slots
+    function init_slots () {
+        $("#row1").text(slots[0][0] + " " + slots [0][1] + " " + slots[0][2]);
+        $("#row2").text(slots[1][0] + " " + slots [1][1] + " " + slots[1][2]);
+        $("#row3").text(slots[2][0] + " " + slots [2][1] + " " + slots[2][2]);
+    }
+    //this funtion displays the current value in cash i.e. there is a change in cash and you want the player to be able to see that
+    function init_cash () {
+        $("#money").text("$" + " " + cash);
+    }
+    init_slots();
+    init_cash();
+    function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    var column = 0;
+    function spin() {
+        var spinTimer = setInterval(function(){ 
+        if (random_num_spins[column] > 0) {
+        for (var i = 0; i < 3; i ++) {
+            if (slots[i][column] === "7") {slots[i][column] = "!"; continue; }
+            if (slots[i][column] === "$") {slots[i][column] = "7"; continue; }
+            if (slots[i][column] === "!") {slots[i][column] = "$"; continue; }
+        }
+        init_slots();
+        random_num_spins[column] --;
+        
+        }
+        else {
+                if (column == 2) {
+                    //checks if there are 3 of a kind in a row
+                    for (var z = 0; z < 3; z ++) {
+                        if (slots[z][0] === "!" && slots[z][1] === "!" && slots[z][2] == "!") {
+                            $("#victoryMessage").text("You hit the jackpot! 3 !\'s = bet X 5");
+                            $("#instructions").css("font-size", "30");
+                            $("#instructions").text("You won  $" + 5*betType + "!");
+                            cash += 5*betType;
+                         }
+                        if (slots[z][0] === "$" && slots[z][1] === "$" && slots[z][2] == "$") {
+                            $("#victoryMessage").text("You hit the jackpot! 3 $\'s = bet X 10");
+                            $("#instructions").css("font-size", "30");
+                            $("#instructions").text( "You won  $" + 10*betType + "!");
+                            cash += 10*betType;
+                         }
+                        if (slots[z][0] === "7" && slots[z][1] === "7" && slots[z][2] == "7") {
+                            $("#instructions").css("font-size", "30");
+                            $("#victoryMessage").text("You hit the jackpot! 3 $\'s = bet X 15");
+                            $("#instructions").text( "You won  $" + 15*betType + "!");
+                            cash += 15*betType;
+                         }
+                         init_cash();
+                 }
+            column = 0;
+            spinning = false;
+            if (cash< 0) {
+                alert("You lost all your money!");
+            }
+            else if (cash >= 10000) {
+                alert("Congratulations! You won the game!")
+            }
+            clearInterval(spinTimer);
+                }
+             else {
+                  column ++;
+                }
+        }
+        },//end of set interval's first argument 
+        Math.floor(Math.random() * 30 + 95));//time in miliseconds
+    }
+    //this function is for every button 
+    $("button").on('click touch',function() {
+        $("#win").text("Win the game by winning $10,000 or more!");
+    });
+     $("button.bet1").on('click touch',function() {
+         
+         if (column === 0 && spinning === false) {
+             if (cash >= 1) {
+         betType = 1;
+         cash -= 1;
+         init_cash();
+         $("#instructions").text("Get 3 of a kind in a row to win a jackpot!");
+         $("#instructions").css("font-size", "20");
+         $("#victoryMessage").empty();
+         random_num_spins =[getRandomInt(3,11),getRandomInt(3,9),getRandomInt(2,7)];
+         spin();
+         spinning = true;
+             }
+             else
+             {
+                 alert("You don't have enough money for that bet");
+             }
+         }
+});
+$("button.bet10").on('click touch',function() {
+         
+         if (column === 0  && spinning === false) {
+             if (cash >= 10) {
+         betType = 10;
+         cash -= 10;
+         init_cash();
+         $("#instructions").text("Get 3 of a kind in a row to win a jackpot!");
+         $("#instructions").css("font-size", "20");
+         $("#victoryMessage").empty();
+         random_num_spins =[getRandomInt(4,12),getRandomInt(4,10),getRandomInt(2,7)];
+         spin();
+         spinning = true;
+         }
+         else {
+             alert("You don't have enough money for that bet");
+         }
+         }
+         
+});
+$("button.bet100").on('click touch',function() {
+         
+         if (column === 0  && spinning === false) {
+             if (cash >= 100) {
+         betType = 100;
+         cash -= 100;
+         init_cash();
+         $("#instructions").text("Get 3 of a kind in a row to win a jackpot!");
+         $("#instructions").css("font-size", "20");
+         $("#victoryMessage").empty();
+         random_num_spins =[getRandomInt(5,13),getRandomInt(5,11),getRandomInt(2,7)];
+         spin();
+         spinning = true;
+         }
+         else {
+             alert("You don't have enough money for that bet");
+             }
+         }
+         
+});
+     
+     
+});
+    
+    
+   
+</script>
+    </body>
+</html>
